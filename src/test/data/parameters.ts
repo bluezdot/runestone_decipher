@@ -31,7 +31,7 @@ export const testMintingRune: RuneId = {
     tx: 188
 }
 
-export const testEdictRune: Edict[] = [
+export const testEdictRune2: Edict[] = [
     {
         id: {
             block: BigInt(840000),
@@ -47,7 +47,20 @@ export const testEdictRune: Edict[] = [
         },
         amount: BigInt(20000),
         output: 0
-    }]
+    }
+]
+
+// https://mempool.space/tx/0477135a078a5a383f3bc00acd4737e9b5d2562f43ad2022a74a58d6891b9d14
+export const testEdictRune: Edict[] = [
+    {
+        id: {
+            block: BigInt(840000),
+            tx: 142
+        },
+        amount: BigInt(430000),
+        output: 1
+    }
+]
 
 // txid: 0477135a078a5a383f3bc00acd4737e9b5d2562f43ad2022a74a58d6891b9d14
 export const testTx = {

@@ -1,9 +1,9 @@
-export interface RuneId {
+export type RuneId = {
     block: bigint,
     tx: number
 }
 
-export interface Edict {
+export type Edict = {
     id: {
         block: bigint,
         tx: number

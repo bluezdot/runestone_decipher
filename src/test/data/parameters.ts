@@ -2,11 +2,6 @@ import { RuneEtchingSpec } from "@magiceden-oss/runestone-lib";
 import {Edict, RuneId, Terms} from "../../utils/type";
 import {RunestoneTx} from "@magiceden-oss/runestone-lib/src/runestone";
 
-const runeName = 'BLUEDOT•SUBWALLET'
-const symbol = 'ϟ';
-const premine = BigInt(200000);
-const divisibility = 8;
-
 const END_OFFSET = BigInt(20000);
 const cap = BigInt(200);
 const amount = BigInt(500);
@@ -18,13 +13,32 @@ const terms: Terms = {
     }
 }
 
-export const testEtchingRune: RuneEtchingSpec = {
-    runeName,
-    divisibility,
-    premine,
-    symbol,
+export const testEtchingRune2: RuneEtchingSpec = {
+    runeName: 'BLUEDOT•SUBWALLET',
+    divisibility: 8,
+    premine: BigInt(200000),
+    symbol: 'ϟ',
     terms
 }
+
+// https://runealpha.xyz/txs/f9de57f24d363f4384c848ab3cafcdb751c417ac2b106442c9d91c9487904b95
+export const testEtchingRuneAlphaCook: RuneEtchingSpec = {
+    runeName: 'RUNE•ALPHA•COOK',
+    divisibility: 3,
+    premine: BigInt(198940099000),
+    symbol: 'C',
+    turbo: true
+}
+export const testEdictsRuneAlphaCook: Edict[] = [
+    {
+        id: { // 0:0 refer itself
+            block: BigInt(0),
+            tx: 0
+        },
+        amount: BigInt(198940099000),
+        output: 1
+    }
+]
 
 export const testMintingRune: RuneId = {
     block: BigInt(840000),

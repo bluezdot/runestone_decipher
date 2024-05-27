@@ -12,3 +12,7 @@ export const minting = (runeId: RuneId) => encodeRunestone({
 export const edict = (edicts: Edict[]) => encodeRunestone({
     edicts: edicts
 });
+
+export const bufferToHexString = (buffer: Buffer) => {
+    return buffer.toString('hex')
+}
